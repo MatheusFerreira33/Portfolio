@@ -1,28 +1,26 @@
-import { Inter } from 'next/font/google';
-import { ChakraProvider } from '@chakra-ui/react';
-import StyledComponentsRegistry from './lib/registry';
-import { GlobalStyle } from '../style/Global';
-
-const inter = Inter({ subsets: ['latin'] });
-
+import StyledComponentsRegistry from './lib/registry'
+import { ChakraProvider} from '@chakra-ui/react';
+ 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
-    <html lang="pt-br">
-      <body className={inter.className} style={{
-        background:'red',
-        display:'none',
-        margin:'0',
-        boxSizing:'border-box'
+    <html>      
+      <body style={{
+          margin:0,
+          padding:0,
+          boxSizing:'border-box',
+          backgroundColor:'#151517'
       }}>
-        <ChakraProvider>
-          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-        </ChakraProvider>
+        <StyledComponentsRegistry>
+            <ChakraProvider>
+              {children}
+            </ChakraProvider>
+          </StyledComponentsRegistry>
       </body>
-    
+
     </html>
-  );
+  )
 }
