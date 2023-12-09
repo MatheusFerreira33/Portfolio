@@ -23,7 +23,7 @@ export const AboutMe = ()=>{
     }, []);
 
     const handleDownload = async() => {
-        const filePath = 'http://localhost:3000/MatheusFerreira%20Web%20Full-Stack.pdf';
+        const filePath = 'https://portfolio-virid-ten-74.vercel.app/MatheusFerreira%20Web%20Full-Stack.pdf';
 
         const response = await fetch(filePath);
         const arrayBuffer = await response.arrayBuffer();
