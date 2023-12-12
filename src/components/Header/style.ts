@@ -11,7 +11,7 @@ export const StyledMenu = styled.div`
   font-size: 18px;
   background-color: #0A0A0B;
   color: white;
-  border-bottom: 1px solid #623CEA;
+  border-bottom: 2px solid #623CEA;
   font-weight: bold;
 
   ul{
@@ -40,7 +40,7 @@ export const StyledMenu = styled.div`
     height:50px;
     margin: auto;
     margin-top: 25px;
-    border: 1px solid #623CEA;
+    border: 2px solid #623CEA;
     border-radius: 50px;
   }
 
